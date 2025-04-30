@@ -1,0 +1,170 @@
+/* Custom styles for Shoes E-Commerce */
+
+/* Orange accent color */
+:root {
+  --orange: #ff6600;
+}
+
+.text-orange {
+  color: var(--orange) !important;
+}
+
+.btn-orange {
+  background-color: var(--orange);
+  color: white;
+  border: none;
+}
+
+.btn-orange:hover,
+.btn-orange:focus {
+  background-color: #e65c00;
+  color: white;
+}
+
+/* Header background image and overlay */
+.header-bg {
+  background-image: url('https://images.pexels.com/photos/1757363/pexels-photo-1757363.jpeg?auto=compress&cs=tinysrgb&w=600');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 250px;
+}
+
+.header-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Header content on top */
+.header-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Product cards horizontal scroll */
+#newest-shoes > .card,
+#related-products > .card {
+  min-width: 180px;
+  cursor: pointer;
+}
+
+/* Category icons container */
+#categories > .category-item {
+  flex: 0 0 auto;
+  text-align: center;
+  cursor: pointer;
+}
+
+#categories > .category-item > .category-icon {
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  background-color: #f8f9fa;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.5rem auto;
+}
+
+/* Popular shoes list group item */
+.popular-shoe-item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.popular-shoe-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 0.25rem;
+  margin-right: 1rem;
+}
+
+.popular-shoe-info {
+  flex-grow: 1;
+}
+
+.popular-shoe-price {
+  font-weight: 600;
+  color: var(--orange);
+}
+
+/* Size buttons */
+#product-detail-sizes .btn {
+  min-width: 50px;
+}
+
+/* Color circles */
+.color-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.color-circle.selected {
+  border-color: var(--orange);
+}
+
+/* Cart item */
+.cart-item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.cart-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 0.25rem;
+  margin-right: 1rem;
+}
+
+.cart-item-info {
+  flex-grow: 1;
+}
+
+.cart-item-quantity {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cart-item-quantity button {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  font-size: 1.2rem;
+  line-height: 1;
+  border-radius: 0.25rem;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+}
+
+.cart-item-price {
+  font-weight: 600;
+  color: var(--orange);
+  min-width: 80px;
+  text-align: right;
+}
+
+/* Bottom navigation active button */
+.navbar .nav-btn.active {
+  color: var(--orange);
+}
+
+/* Responsive tweaks */
+@media (min-width: 768px) {
+  /* Hide bottom nav on md and up */
+  nav.navbar.fixed-bottom {
+    display: none !important;
+  }
+}
